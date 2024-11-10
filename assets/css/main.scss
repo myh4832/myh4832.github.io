@@ -17,9 +17,15 @@ search: false
 }
 
 
-/* Follow 버튼을 클릭하지 않아도 링크들이 보이도록 설정 */
-.sidebar .follow-links {
-  display: block !important; /* 항상 보이도록 설정 */
+/* Follow 버튼 숨기기 */
+.follow-toggle {
+  display: none !important;
+}
+/* 링크들을 항상 보이도록 설정 */
+.follow-links {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 #newsBtn {
