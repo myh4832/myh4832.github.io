@@ -16,6 +16,12 @@ search: false
   object-fit: cover;
 }
 
+
+/* Follow 버튼을 클릭하지 않아도 링크들이 보이도록 설정 */
+.sidebar .follow-links {
+  display: block !important; /* 항상 보이도록 설정 */
+}
+
 #newsBtn {
   display: none;
 }
