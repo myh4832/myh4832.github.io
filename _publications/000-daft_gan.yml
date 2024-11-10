@@ -1,0 +1,11 @@
+key: daft_gan
+title: "DAFT-GAN: Dual Affine Transformation Generative Adversarial Network for Text-Guided Image Inpainting"
+authors:
+	- name: Jihoon Lee
+	- name: Yunhong Min
+	- name: Hwidong Kim
+	- name: Sangtae Ahn
+
+venue: ACM MM 2024
+project_exist: false
+arXiv: https://arxiv.org/abs/2408.04962

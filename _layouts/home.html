@@ -1,10 +1,159 @@
 ---
 layout: archive
 ---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+	.box {
+		width: 100%;
+		height: 100%;
+		border-radius: 70%;
+		overflow: hidden;
+	}
+
+	.profile {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.img-container {
+		text-align: center;
+	}
+	.iframe-container {
+			position: relative;
+			width: 100%;
+		}
+	.gallery_prev, .gallery_next {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: #252a34; /*rgba(0, 0, 0, 0.5);*/
+			color: white;
+			font-size: 18px;
+			border: 2px solid white;
+			border-radius: 50%;
+			padding: 10px;
+			cursor: pointer;
+			z-index: 10;
+		}
+	.gallery_prev {
+		left: 0;
+	}
+	.gallery_next {
+		right: 0;
+	}
+
+</style>
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<h3 class="archive__subtitle">Bio</h3>
+<p class="bio">
+	I am Yunhong Min, a MsD student in the <a href="https://visualai.kaist.ac.kr/" target="_blank">KAIST Visual
+		AI Group</a>, led by Prof. <a href="https://mhsung.github.io/" target="_blank">Minhyuk
+		Sung</a>.
+</p>
+<p class="bio">
+	My research interests are in 3D vision and diffusion models, with a focus on developing a general 3D generative framework leveraging powerful diffusion priors.
+</p>
+
+
+<h3 class="archive__subtitle">News</h3>
+<article class="news">
+	<ul id="newsList">
+		<li> (Mar. 2025) I joined <a href="https://visualai.kaist.ac.kr/" target="_blank">KAIST Visual
+      AI Group</a> as a master's student, led by Prof. <a href="https://mhsung.github.io/" target="_blank">Minhyuk
+        Sung</a>.</li>
+		<li> (Aug. 2024) My first paper, <a href="https://arxiv.org/abs/2408.04962" target="_blank">DAFT-GAN</a> is accepted at ACM MM 2024!
+		</li>
+		<li> (Nov. 2023) I won the Gold prize (1st place) at the 1st Kohyoung AI competition, held at the <a
+      href="https://2023.iccas.org/?page_id=3573"
+      target="_blank">International Conference on Control, Automation and Systems (ICCAS) 2023</a>.</li>
+		<li> (Sep. 2023) I joined <a href="https://github.com/knu-brainai" target="_blank">KNU Brain AI Lab</a> as an undergraduate researcher, led by Prof. Sangtae Ahn.</li>
+	</ul>
+	<button class="listBtn" , id="newsBtn">Show All</button>
+</article>
+
+<h3 class="archive__subtitle">Publications</h3>
+<!--<article style="font-size: 14px;" role="publication">-->
+<article class="publication">
+	<!--DAFT-GAN-->
+  <div class="publication-cell">
+    <div class="thumbnail">
+        <img style="width:100%; height:auto;" src="assets/images/daft_gan_thumbnail.png" alt="DAFT-GAN Thumbnail">
+    </div>
+    <div class="desc-cell">
+        <header><b>DAFT-GAN: Dual Affine Transformation Generative Adversarial Network for Text-Guided Image Inpainting</b></header>
+        <div class="authors">
+            Jihoon Lee*, <b>Yunhong Min*</b>, Hwidong Kim*, Sangtae Ahn (* co-first author.)
+        </div>
+        <div class="conference">ACM MM 2024</div>
+        <div class="links">
+            <a href="https://arxiv.org/abs/2408.04962" target="_blank">[Paper]</a>
+        </div>
+    </div>
+  </div>
+</article>
+
+<!-- <h3 class="archive__subtitle">Academic Service</h3>
+<article class="publication">
+	<p>
+		<b>Conference Reviewer</b>: CVPR, ICCV, ECCV, AAAI, Euroghraphics
+	</p>
+	<p>
+		<b>Workshop Reviewer</b>:
+		<a href="https://generative-vision.github.io/workshop-CVPR-24/" target="_blank">GCV@CVPR2024</a>,
+		<a href="https://sites.google.com/view/ai4vaeccv2024" target="_blank">AI4VA@ECCV2024</a>,
+		<a href="https://www.ood-cv.org/" target="_blank">OOD-CV@ECCV2024</a>
+	</p>
+</article> -->
+
+<script>
+	const newsButton = document.getElementById("newsBtn");
+	const maxVisibleItems = 10;
+	const newsList = document.querySelectorAll("#newsList li");
+
+	newsList.forEach((item, index) => {
+		if (index >= maxVisibleItems) {
+			item.classList.add("hidden");
+		}
+	});
+
+	newsButton.addEventListener("click", () => {
+		if (newsButton.textContent == "Show All") {
+			newsList.forEach(item => item.classList.remove("hidden"));
+			newsButton.textContent = "Show Less";
+		} else {
+			newsList.forEach((item, index) => {
+				if (index >= maxVisibleItems) {
+					item.classList.add("hidden");
+				}
+			});
+			newsButton.textContent = "Show All";
+		};
+	});
+
+	let currentIframe = 1; // Start with the first iframe
+	const totalIframes = 2; // Total number of iframes
+
+	function showIframe(iframeNumber) {
+			var iframes = document.querySelectorAll('.iframe');
+			iframes.forEach(item => item.style.display = "none");
+			document.getElementById('iframe' + iframeNumber).style.display = 'block';
+	}
+
+	function nextIframe() {
+			currentIframe = (currentIframe % totalIframes) + 1; // Go to the next iframe, loop back to 1
+			showIframe(currentIframe);
+	}
+
+	function prevIframe() {
+			currentIframe = (currentIframe - 2 + totalIframes) % totalIframes + 1; // Go to the previous iframe, loop back to the last
+			showIframe(currentIframe);
+	}
+</script>
+
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
