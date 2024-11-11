@@ -5,7 +5,7 @@ search: false
 
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
@@ -29,8 +29,16 @@ search: false
   visibility: visible !important;
 }
 
+.highlight {
+  font-weight: 500; /* 중간 굵기 */
+}
+
 body {
   font-size: 0.9em; /* 전체 텍스트 크기 줄이기 */
+}
+
+.archive__subtitle, .bio, .news, .publication, .desc-cell, .authors, .conference, .links a {
+  font-weight: 300; /* 모든 텍스트 얇게 */
 }
 
 /* Bio, News, Publications 제목 스타일 */
@@ -84,7 +92,7 @@ body {
 }
 
 .desc-cell header {
-  font-size: 0.9em; /* 제목 크기를 줄이기 */
+  font-size: 1.0em; /* 제목 크기를 줄이기 */
   font-weight: bold;
   margin-bottom: 4px;
 }
@@ -96,7 +104,7 @@ body {
 }
 
 .conference {
-  font-size: 0.95em;
+  font-size: 1.0em;
   font-style: italic;
   color: #333;
 }
