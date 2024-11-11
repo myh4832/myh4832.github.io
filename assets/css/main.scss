@@ -15,6 +15,8 @@ search: false
   max-width: none !important; /* max-width 제한 제거 */
   border-radius: 50%;
   object-fit: cover;
+  filter: none !important; /* 흐림 효과 제거 */
+  opacity: 1 !important; /* 투명도 최대화 */
 }
 
 
