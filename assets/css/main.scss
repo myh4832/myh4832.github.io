@@ -15,8 +15,6 @@ search: false
   max-width: none !important; /* max-width 제한 제거 */
   border-radius: 50%;
   object-fit: cover;
-  filter: none !important; /* 흐림 효과 제거 */
-  opacity: 1 !important; /* 투명도 최대화 */
 }
 
 
@@ -119,4 +117,12 @@ body {
 
 .links a:hover {
   text-decoration: underline;
+}
+
+
+@media (min-width: 64em) {
+  .sidebar {
+      opacity: 1 !important;                /* 완전히 불투명하게 설정 */
+      transition: none !important;          /* 전환 효과 제거 */
+  }
 }
