@@ -21,7 +21,7 @@ title                    : "Yunhong Min"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Yunhong Min"
-description              : "M.S. Student @ KAIST CS"
+description              : "B.S. Student @ KNU EE"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -115,8 +115,8 @@ analytics:
 author:
   name             : "Yunhong Min"
   avatar           : "/assets/images/myh.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "M.S. Student @ KAIST CS"
-  location         : "Daejeon, Korea"
+  bio              : "B.S. Student @ KNU EE"
+  location         : "Daegu, Korea"
   email            : #"dbsghd4832@gmail.com"
   links:
     - label: "Email"
