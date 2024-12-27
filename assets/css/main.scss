@@ -13,14 +13,8 @@ search: false
 .author__avatar img {
   width: 200px !important;
   height: 200px !important;
-  border-radius: 50%; /* 동그란 형태 유지 */
+  border-radius: 80%; /* 동그란 형태 유지 */
   object-fit: cover; /* 이미지 비율 유지 */
-}
-
-.author__avatar {
-  display: block; /* table-cell 제거 */
-  width: auto;
-  height: auto;
 }
 
 /* Follow 버튼 숨기기 */
