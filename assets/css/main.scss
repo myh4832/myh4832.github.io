@@ -11,11 +11,16 @@ search: false
 
 /* Avatar 스타일 */
 .author__avatar img {
-  all: unset; /* 모든 이전 스타일 초기화 */
   width: 200px !important;
   height: 200px !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
+  border-radius: 50%; /* 동그란 형태 유지 */
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+.author__avatar {
+  display: block; /* table-cell 제거 */
+  width: auto;
+  height: auto;
 }
 
 /* Follow 버튼 숨기기 */
