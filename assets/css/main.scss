@@ -11,6 +11,7 @@ search: false
 
 /* Avatar 스타일 */
 .author__avatar img {
+  all: unset; /* 모든 이전 스타일 초기화 */
   width: 200px !important;
   height: 200px !important;
   border-radius: 50% !important;
@@ -83,31 +84,30 @@ body {
 .desc-cell {
   flex: 1;
   font-family: "Roboto", serif;
-  font-size: 0.8em;
+  font-size: 14px;
   line-height: 1.4;
 }
 
 .desc-cell header {
-  font-size: 0.9em;
   font-weight: bold;
   margin-bottom: 4px;
 }
 
 .authors {
-  font-size: 16px !important;
+  font-size: 12px !important;
   color: #333 !important;
   margin-bottom: 4px;
 }
 
 .conference {
-  font-size: 16px !important;
+  font-size: 13px !important;
   font-style: italic !important;
   color: #333;
 }
 
 .links a {
   color: #007bff;
-  font-size: 14px !important;
+  font-size: 12px !important;
   text-decoration: underline !important;
 }
 
