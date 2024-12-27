@@ -11,7 +11,7 @@ search: false
 
 /* Avatar 스타일 */
 .author__avatar img {
-  width: 180px;
+  width: 230px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
@@ -94,13 +94,13 @@ body {
 }
 
 .authors {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: #555;
   margin-bottom: 4px;
 }
 
 .conference {
-  font-size: 0.9em;
+  font-size: 1.0em;
   font-style: italic;
   color: #333;
 }
@@ -108,7 +108,7 @@ body {
 .links a {
   color: #007bff;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .links a:hover {
