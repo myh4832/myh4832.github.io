@@ -11,10 +11,10 @@ search: false
 
 /* Avatar 스타일 */
 .author__avatar img {
-  width: 230px !important;
+  width: 200px !important;
   height: 200px !important;
-  border-radius: 50%;
-  object-fit: cover;
+  border-radius: 50% !important;
+  object-fit: cover !important;
 }
 
 /* Follow 버튼 숨기기 */
@@ -94,25 +94,21 @@ body {
 }
 
 .authors {
-  font-size: 0.9em !important;
-  color: #555;
+  font-size: 16px !important;
+  color: #333 !important;
   margin-bottom: 4px;
 }
 
 .conference {
-  font-size: 1.0em !important;
-  font-style: italic;
+  font-size: 16px !important;
+  font-style: italic !important;
   color: #333;
 }
 
 .links a {
   color: #007bff;
-  text-decoration: none;
-  font-size: 0.9em !important;
-}
-
-.links a:hover {
-  text-decoration: underline;
+  font-size: 14px !important;
+  text-decoration: underline !important;
 }
 
 /* Sidebar 스타일 */
