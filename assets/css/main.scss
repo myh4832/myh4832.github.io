@@ -5,54 +5,61 @@
 
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 
-/* Avatar 스타일 */
-.author__avatar img {
-  width: 200px !important;
-  height: 225px !important;
-  border-radius: 50%; /* 동그란 형태 유지 */
-  object-fit: cover; /* 이미지 비율 유지 */
-}
+/* Minimal Mistakes skin + core */
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
 
-/* Follow 버튼 숨기기 */
-.follow-toggle {
-  display: none;
-}
+/* -----------------------------
+   Global tweaks
+------------------------------ */
+body { font-size: 0.8em; }
 
-/* 링크 항상 보이도록 설정 */
-.follow-links {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-}
+.highlight { font-weight: 500; }
 
-/* Highlight 텍스트 */
-.highlight {
-  font-weight: 500;
-}
-
-/* 전체 텍스트 크기 조정 */
-body {
-  font-size: 0.8em; /* 글자 크기 전반적으로 축소 */
-}
-
-/* 섹션 제목 스타일 */
 .archive__subtitle {
   font-size: 1.1em;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
 }
 
-/* 본문 텍스트 스타일 */
+/* Sidebar */
+@media (min-width: 64em) {
+  .sidebar { opacity: 1; transition: none; }
+}
+
+/* Avatar */
+.author__avatar img {
+  width: 200px !important;
+  height: 225px !important;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Follow block */
+.follow-toggle { display: none; }
+.follow-links  { display: block; opacity: 1; visibility: visible; }
+
+/* Bio & News */
 .bio, .news {
   font-size: 0.8em;
   font-family: "Roboto", serif;
   line-height: 1.5;
 }
 
+/* -----------------------------
+   Publications list
+   (left thumbnail, right text)
+------------------------------ */
+.publication {          /* wrapper <article class="publication"> */
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* one item */
 .publication-cell {
   display: flex;
   align-items: flex-start;
@@ -60,40 +67,44 @@ body {
   padding-bottom: 1rem;
   border-bottom: 1px solid #e0e0e0;
 }
+.publication-cell:last-child { border-bottom: none; }
 
-.publication-cell:last-child {
-  border-bottom: none;
-}
-
-/* 썸네일 크기: 한 군데에서만 정의 */
+/* thumbnail box – unified size */
 .publication-cell .thumbnail {
-  flex: 0 0 160px;   /* 가로 고정 */
-  height: 100px;     /* 세로 고정 */
+  flex: 0 0 160px;   /* fixed width */
+  height: 100px;     /* fixed height */
   overflow: hidden;
   border-radius: 4px;
 }
 
+/* image crop to fit (uniform grid) */
 .publication-cell .thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 비율 유지하면서 꽉 채움 */
+  object-fit: cover;  /* crop overflow, keep ratio */
   display: block;
 }
 
-/* 텍스트 영역 */
+/* text column */
 .publication-cell .desc-cell {
   flex: 1;
+  font-family: "Roboto", serif;
   font-size: 0.9rem;
   line-height: 1.4;
-  font-family: "Roboto", serif;
 }
 
-.publication-cell .desc-cell header {
-  font-size: 1rem;
-  font-weight: bold;
+/* reset theme’s header amplification inside publication block */
+.publication .desc-cell header {
+  all: unset;               /* clear Minimal Mistakes header styles */
+  display: block;
+  font-size: 1rem;          /* title size (tune if you want smaller) */
+  line-height: 1.35;
+  font-weight: 700;
   margin-bottom: 0.3rem;
+  color: #222;
 }
 
+/* meta lines */
 .publication-cell .authors {
   font-size: 0.8rem;
   color: #555;
@@ -106,6 +117,10 @@ body {
   margin-bottom: 0.4rem;
 }
 
+/* links row */
+.publication-cell .links {
+  margin-top: 0.2rem;
+}
 .publication-cell .links a {
   margin-right: 0.8rem;
   display: inline-block;
@@ -114,50 +129,25 @@ body {
   text-decoration: underline;
 }
 
-.thumbnail {
-  width: 100px;
-  align-self: flex-start;
-}
+/* -----------------------------
+   Clean up old/duplicated rules
+------------------------------ */
+/* DO NOT re-define .thumbnail/.desc-cell globally – keep them scoped above.
+   (남아있던 전역 .thumbnail, .desc-cell, .authors, .conference, .links a 규칙 삭제) */
 
-.thumbnail img {
-  width: 100%;
-  border-radius: 4px;
-}
-
-.desc-cell {
-  flex: 1;
-  font-family: "Roboto", serif;
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-.desc-cell header {
-  font-weight: bold;
-  margin-bottom: 4px;
-}
-
-.authors {
-  font-size: 12px !important;
-  color: #333 !important;
-  margin-bottom: 4px;
-}
-
-.conference {
-  font-size: 13px !important;
-  font-style: italic !important;
-  color: #333;
-}
-
-.links a {
-  color: #007bff;
-  font-size: 12px !important;
-  text-decoration: underline !important;
-}
-
-/* Sidebar 스타일 */
-@media (min-width: 64em) {
-  .sidebar {
-      opacity: 1;
-      transition: none;
+/* -----------------------------
+   Responsive (optional)
+------------------------------ */
+@media (max-width: 640px) {
+  .publication-cell {
+    flex-direction: row;           /* keep side-by-side on phones too */
+    gap: 0.75rem;
   }
+  .publication-cell .thumbnail {
+    flex-basis: 140px;
+    height: 90px;
+  }
+  .publication .desc-cell header { font-size: 0.95rem; }
+  .publication-cell .authors     { font-size: 0.78rem; }
+  .publication-cell .conference  { font-size: 0.8rem; }
 }
