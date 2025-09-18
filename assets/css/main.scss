@@ -53,50 +53,61 @@ body {
   line-height: 1.5;
 }
 
-.publication {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem; /* 각 논문 간 간격 */
-}
-
 .publication-cell {
   display: flex;
   align-items: flex-start;
-  gap: 1rem; /* 이미지와 텍스트 간격 */
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0; /* 논문 간 구분선 */
+}
+
+.publication-cell:last-child {
+  border-bottom: none; /* 마지막은 구분선 제거 */
 }
 
 .publication-cell .thumbnail {
-  flex: 0 0 180px; /* 썸네일 고정 폭 */
+  flex: 0 0 160px;       /* 고정 폭 */
+  height: 100px;         /* 고정 높이 */
+  overflow: hidden;
+  border-radius: 4px;
 }
 
 .publication-cell .thumbnail img {
   width: 100%;
-  height: auto;
-  border-radius: 4px;
+  height: 100%;
+  object-fit: cover;     /* 비율 유지하며 자르기 */
 }
 
 .publication-cell .desc-cell {
-  flex: 1; /* 나머지 공간 차지 */
-  font-size: 0.95rem;
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .publication-cell .desc-cell header {
-  font-size: 1.05rem;
-  margin-bottom: 0.3rem;
-}
-
-.publication-cell .authors {
-  color: #555;
+  font-size: 1rem;
   margin-bottom: 0.2rem;
 }
 
+.publication-cell .authors {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
 .publication-cell .conference {
+  font-size: 0.85rem;
   font-style: italic;
   margin-bottom: 0.4rem;
 }
 
+.publication-cell .links {
+  margin-top: 0.2rem;
+}
+
 .publication-cell .links a {
-  margin-right: 0.6rem;
+  margin-right: 0.8rem;
+  display: inline-block; /* 줄 안에서만 */
 }
 
 .thumbnail {
