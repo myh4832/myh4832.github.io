@@ -1,0 +1,11 @@
+key: psi_sampler
+title: "Psi-Sampler: Initial Particle Sampling for SMC-Based Inference-Time Reward Alignment in Score Models"
+authors:
+	- name: Taehoon Yoon
+	- name: Yunhong Min
+	- name: Kyeongmin Yeo
+	- name: Minhyuk Sung
+
+venue: NeurIPS 2025
+project_exist: true
+arXiv: https://arxiv.org/abs/2506.01320
