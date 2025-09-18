@@ -25,7 +25,7 @@
 
 /* 오른쪽 본문(메인 컬럼)만 축소 */
 .page__content {
-  font-size: 0.8rem;     /* ← 필요 시 0.88~0.95rem로 조절 */
+  font-size: 0.6rem;     /* ← 필요 시 0.88~0.95rem로 조절 */
   line-height: 1.65;
 }
 
@@ -57,7 +57,7 @@
 
 /* Bio & News 본문체 */
 .bio, .news {
-  font-size: 0.8em;              /* .page__content 기준 1배 */
+  font-size: 0.6em;              /* .page__content 기준 1배 */
   font-family: "Roboto", serif;
   line-height: 1.6;
 }
@@ -69,7 +69,7 @@
 
 /* Publications 블록만 추가로 살짝 축소 */
 .publication {                 /* <article class="publication"> */
-  font-size: 0.8em;           /* .page__content 대비 92% */
+  font-size: 0.6em;           /* .page__content 대비 92% */
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
