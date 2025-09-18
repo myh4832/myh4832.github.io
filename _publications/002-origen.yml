@@ -1,0 +1,12 @@
+key: origen
+title: "ORIGEN: Zero-Shot 3D Orientation Grounding in Text-to-Image Generation"
+authors:
+	- name: Yunhong Min
+	- name: Daehyeon Choi
+	- name: Kyeongmin Yeo
+	- name: Jihyun Lee
+	- name: Minhyuk Sung
+
+venue: NeurIPS 2025
+project_exist: true
+arXiv: https://arxiv.org/abs/2503.22194

@@ -47,27 +47,56 @@ body {
 }
 
 /* 본문 텍스트 스타일 */
-.bio, .news, .publication {
+.bio, .news {
   font-size: 0.8em;
   font-family: "Roboto", serif;
   line-height: 1.5;
 }
 
-/* Publications 섹션 이미지 */
-.publication img {
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto;
-  display: block;
+.publication {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* 각 논문 간 간격 */
 }
 
 .publication-cell {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
+  gap: 1rem; /* 이미지와 텍스트 간격 */
+}
+
+.publication-cell .thumbnail {
+  flex: 0 0 180px; /* 썸네일 고정 폭 */
+}
+
+.publication-cell .thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.publication-cell .desc-cell {
+  flex: 1; /* 나머지 공간 차지 */
+  font-size: 0.95rem;
+}
+
+.publication-cell .desc-cell header {
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+
+.publication-cell .authors {
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+.publication-cell .conference {
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
+.publication-cell .links a {
+  margin-right: 0.6rem;
 }
 
 .thumbnail {
