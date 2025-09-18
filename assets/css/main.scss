@@ -65,17 +65,20 @@ body {
   border-bottom: none; /* 마지막은 구분선 제거 */
 }
 
+/* 썸네일 영역 고정 */
 .publication-cell .thumbnail {
-  flex: 0 0 160px;       /* 고정 폭 */
-  height: 100px;         /* 고정 높이 */
+  flex: 0 0 160px;   /* 가로 160px */
+  height: 100px;     /* 세로 100px */
   overflow: hidden;
   border-radius: 4px;
 }
 
+/* 이미지 정리 */
 .publication-cell .thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* 비율 유지하며 자르기 */
+  object-fit: cover; /* 비율 유지하면서 꽉 채움 */
+  display: block;
 }
 
 .publication-cell .desc-cell {
