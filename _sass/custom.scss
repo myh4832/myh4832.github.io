@@ -16,20 +16,26 @@
   font-family: "Roboto", serif;
 }
 
-.page__content .academic-services p + ul {
-  margin-top: 0.1rem !important;   /* 제목 아래 간격 거의 제거 */
+.page__content .academic-services p+ul {
+  margin-top: 0.1rem !important;
+  /* 제목 아래 간격 거의 제거 */
 }
 
 /* 리스트 전체 여백 정리 */
 .page__content .academic-services ul {
-  margin-bottom: 0;                /* 리스트 아래쪽 여백 제거 */
-  margin-left: 1.2rem;             /* 점(•) 들여쓰기 유지 */
-  padding-left: 0;                 /* 불필요한 기본 패딩 제거 */
+  margin-bottom: 0;
+  /* 리스트 아래쪽 여백 제거 */
+  margin-left: 1.2rem;
+  /* 점(•) 들여쓰기 유지 */
+  padding-left: 0;
+  /* 불필요한 기본 패딩 제거 */
 }
 
 .page__content .academic-services li {
-  margin: 0;                       /* li 간격 없애기 */
-  line-height: 1.4;                /* bullet 줄 간격 조정 */
+  margin: 0;
+  /* li 간격 없애기 */
+  line-height: 1.4;
+  /* bullet 줄 간격 조정 */
 }
 
 /* Publication 내부 구조 */
@@ -40,14 +46,18 @@
   padding-bottom: 1rem;
   border-bottom: 1px solid #e0e0e0;
 }
-.publication-cell:last-child { border-bottom: none; }
+
+.publication-cell:last-child {
+  border-bottom: none;
+}
 
 .publication-cell .thumbnail {
-  flex: 0 0 120px;
-  height: 80px;
+  flex: 0 0 80px;
+  height: 60px;
   overflow: hidden;
   border-radius: 4px;
 }
+
 .publication-cell .thumbnail img {
   width: 100%;
   height: 100%;
@@ -56,13 +66,14 @@
 
 .publication-cell .desc-cell {
   flex: 1;
-  font-size: 0.85em;
+  font-size: 0.75em;
   line-height: 1.45;
 }
+
 .publication-cell .desc-cell header {
   all: unset;
   display: block;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: 700;
   margin-bottom: 0.3rem;
   color: #222;
@@ -72,10 +83,12 @@
 .page__content .academic-services p {
   margin: 0.25rem 0;
 }
+
 .page__content .academic-services b {
   font-weight: 600;
   margin-right: 0.4rem;
 }
+
 .page__content .academic-services a {
   color: #0044cc;
   text-decoration: underline;
@@ -91,10 +104,15 @@
 
 /* Sidebar always visible */
 @media (min-width: 64em) {
-  .sidebar { opacity: 1; transition: none; }
+  .sidebar {
+    opacity: 1;
+    transition: none;
+  }
 }
 
 /* Mobile tweak */
 @media (max-width: 640px) {
-  .page__inner-wrap .page__content { font-size: 0.75rem !important; }
+  .page__inner-wrap .page__content {
+    font-size: 0.75rem !important;
+  }
 }
