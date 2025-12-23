@@ -54,28 +54,36 @@
   }
 
   /* Publications / Academic Services - Standard font */
-  .page__content .publication,
-  .page__content .academic-services {
+  /* Publications - Standard font */
+  .page__content .publication {
     font-size: 0.8em !important;
     line-height: 1.6;
     font-family: "Roboto", serif;
   }
 
-  .page__content .academic-services p+ul {
-    margin-top: 0 !important;
+  /* Academic Services - Global styling 16px */
+  .academic-services,
+  .academic-services ul,
+  .academic-services li,
+  .academic-services p,
+  .academic-services b {
+    font-size: 16px !important;
   }
 
-  /* 리스트 전체 여백 정리 */
-  .page__content .academic-services ul {
+  .academic-services p {
+    margin: 0.25rem 0 0 0 !important;
+  }
+
+  .academic-services ul {
+    margin-top: 0 !important;
     margin-bottom: 0;
     margin-left: 1.2rem;
     padding-left: 0;
   }
 
-  .page__content .academic-services li {
+  .academic-services li {
     margin: 0;
     line-height: 1.4;
-    font-size: 16px !important;
   }
 
   /* Publication 내부 구조 */
@@ -95,12 +103,12 @@
 
   /* Thumbnail Container */
   .publication-cell .thumbnail {
-    flex: 0 0 200px !important;
-    width: 200px !important;
-    min-width: 200px !important;
+    flex: 0 0 210px !important;
+    width: 210px !important;
+    min-width: 210px !important;
     /* Prevent shrinking */
-    height: 160px !important;
-    min-height: 160px !important;
+    height: 168px !important;
+    min-height: 168px !important;
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -108,9 +116,9 @@
 
   /* Thumbnail Image - Explicit Pixel Force */
   .publication-cell .thumbnail img {
-    width: 200px !important;
-    height: 160px !important;
-    min-height: 160px !important;
+    width: 210px !important;
+    height: 168px !important;
+    min-height: 168px !important;
     object-fit: cover !important;
     display: block;
   }
@@ -148,21 +156,17 @@
     color: inherit;
     font-weight: normal;
     font-style: normal;
-    margin-top: 0.2rem;
-    font-size: 1.1em !important;
+    margin-top: 0.25rem;
+    font-size: 1.05em !important;
   }
 
   /* Academic Services */
-  .page__content .academic-services p {
-    margin: 0.25rem 0 0 0 !important;
-  }
-
-  .page__content .academic-services b {
+  .academic-services b {
     font-weight: 600;
     margin-right: 0.4rem;
   }
 
-  .page__content .academic-services a {
+  .academic-services a {
     color: #0044cc;
     text-decoration: underline;
   }
