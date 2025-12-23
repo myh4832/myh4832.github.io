@@ -99,21 +99,24 @@
     margin-bottom: 0;
   }
 
+  /* Thumbnail Container */
   .publication-cell .thumbnail {
-    /* Maximum size as requested - Forcing width */
     flex: 0 0 300px !important;
     width: 300px !important;
     min-width: 300px !important;
     /* Prevent shrinking */
     height: 300px !important;
+    min-height: 300px !important;
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
+  /* Thumbnail Image - Explicit Pixel Force */
   .publication-cell .thumbnail img {
-    width: 100% !important;
-    height: 100% !important;
+    width: 300px !important;
+    height: 300px !important;
+    min-height: 300px !important;
     object-fit: cover !important;
     display: block;
   }
@@ -193,6 +196,14 @@
       width: 120px !important;
       min-width: 120px !important;
       height: 120px !important;
+      /* And the image inside */
+      min-height: 120px !important;
+    }
+
+    .publication-cell .thumbnail img {
+      width: 120px !important;
+      height: 120px !important;
+      min-height: 120px !important;
     }
   }
 </style>
