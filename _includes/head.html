@@ -35,9 +35,15 @@
     line-height: 1.6 !important;
   }
 
-  /* 공통 섹션: Bio / News / Publications / Academic Services */
+  /* Bio / News - Smaller font */
   .page__content .bio,
-  .page__content .news,
+  .page__content .news {
+    font-size: 0.7em !important;
+    line-height: 1.6;
+    font-family: "Roboto", serif;
+  }
+
+  /* Publications / Academic Services - Standard font */
   .page__content .publication,
   .page__content .academic-services {
     font-size: 0.8em !important;
@@ -78,8 +84,8 @@
 
   .publication-cell .thumbnail {
     /* Square sizing as requested */
-    flex: 0 0 150px !important;
-    height: 150px !important;
+    flex: 0 0 240px !important;
+    height: 240px !important;
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
