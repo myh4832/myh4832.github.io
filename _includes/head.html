@@ -38,19 +38,26 @@
   /* 제목 (Bio, News 등) */
   .archive__subtitle {
     font-size: 1.5em !important;
-    /* Increased font size for titles */
     font-weight: bold;
     margin-bottom: 0.5rem;
     margin-top: 1.5rem;
   }
 
-  /* Bio / News - Smaller font (Body) */
+  /* Bio / News - Smaller font (Body) - Explicitly targeting lists */
   .page__content .bio,
-  .page__content .news {
-    font-size: 0.65em !important;
-    /* Decreased to 0.65em */
-    line-height: 1.6;
+  .page__content .news,
+  .page__content .bio li,
+  .page__content .news li {
+    font-size: 0.6em !important;
+    /* Decreased to 0.6em */
+    line-height: 1.5;
     font-family: "Roboto", serif;
+  }
+
+  .page__content .bio p,
+  .page__content .news p {
+    font-size: 0.6em !important;
+    /* Ensure paragraphs are also small */
   }
 
   /* Publications / Academic Services - Standard font */
@@ -93,8 +100,11 @@
   }
 
   .publication-cell .thumbnail {
-    /* Maximum size as requested */
+    /* Maximum size as requested - Forcing width */
     flex: 0 0 300px !important;
+    width: 300px !important;
+    min-width: 300px !important;
+    /* Prevent shrinking */
     height: 300px !important;
     overflow: hidden;
     border-radius: 6px;
@@ -111,25 +121,33 @@
   .publication-cell .desc-cell {
     flex: 1;
     font-size: 0.85em !important;
-    /* Adjusted to fit content */
     line-height: 1.5;
   }
 
   .publication-cell .desc-cell header {
     all: unset;
     display: block;
-    font-size: 1.15em !important;
+    font-size: 1.4em !important;
+    /* Larger Paper Title */
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #222;
   }
 
-  /* Conference Emphasis */
+  /* Authors - Smaller */
+  .publication-cell .desc-cell .authors {
+    font-size: 0.9em !important;
+    color: #444;
+  }
+
+  /* Conference Emphasis - Italic, not bold */
   .publication-cell .desc-cell .conference {
     color: #0056b3;
     /* Dark Blue for emphasis */
-    font-weight: bold;
+    font-weight: normal !important;
+    font-style: italic !important;
     margin-top: 0.3rem;
+    font-size: 1.0em !important;
   }
 
   /* Academic Services */
@@ -172,6 +190,8 @@
     .publication-cell .thumbnail {
       /* Reduce thumbnail on mobile */
       flex: 0 0 120px !important;
+      width: 120px !important;
+      min-width: 120px !important;
       height: 120px !important;
     }
   }
