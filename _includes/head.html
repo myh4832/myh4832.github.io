@@ -35,10 +35,20 @@
     line-height: 1.6 !important;
   }
 
-  /* Bio / News - Smaller font */
+  /* 제목 (Bio, News 등) */
+  .archive__subtitle {
+    font-size: 1.5em !important;
+    /* Increased font size for titles */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Bio / News - Smaller font (Body) */
   .page__content .bio,
   .page__content .news {
-    font-size: 0.7em !important;
+    font-size: 0.65em !important;
+    /* Decreased to 0.65em */
     line-height: 1.6;
     font-family: "Roboto", serif;
   }
@@ -72,9 +82,9 @@
     display: flex !important;
     align-items: flex-start;
     gap: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 2rem;
     border-bottom: 1px solid #e0e0e0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .publication-cell:last-child {
@@ -83,9 +93,9 @@
   }
 
   .publication-cell .thumbnail {
-    /* Square sizing as requested */
-    flex: 0 0 240px !important;
-    height: 240px !important;
+    /* Maximum size as requested */
+    flex: 0 0 300px !important;
+    height: 300px !important;
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -100,18 +110,26 @@
 
   .publication-cell .desc-cell {
     flex: 1;
-    font-size: 0.9em !important;
-    /* Adjusted for better readability */
-    line-height: 1.6;
+    font-size: 0.85em !important;
+    /* Adjusted to fit content */
+    line-height: 1.5;
   }
 
   .publication-cell .desc-cell header {
     all: unset;
     display: block;
-    font-size: 1.25em !important;
+    font-size: 1.15em !important;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #222;
+  }
+
+  /* Conference Emphasis */
+  .publication-cell .desc-cell .conference {
+    color: #0056b3;
+    /* Dark Blue for emphasis */
+    font-weight: bold;
+    margin-top: 0.3rem;
   }
 
   /* Academic Services */
@@ -149,6 +167,12 @@
   @media (max-width: 640px) {
     .page__inner-wrap .page__content {
       font-size: 0.75rem !important;
+    }
+
+    .publication-cell .thumbnail {
+      /* Reduce thumbnail on mobile */
+      flex: 0 0 120px !important;
+      height: 120px !important;
     }
   }
 </style>
